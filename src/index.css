@@ -332,6 +332,12 @@ h1 em { color: var(--gold-light); font-weight: 500; }
   .floating-call svg { width: 16px; }
 }
 
+/* Màn rất hẹp (iPhone SE 1, máy 320px): nút gọi nổi chỉ còn icon để không đè lên khối đánh giá ở hero */
+@media (max-width: 359px) {
+  .floating-call { justify-content: center; width: 48px; padding: 0; border-radius: 50%; }
+  .floating-call span { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
   .collection-card img, .button { transition: none; }
